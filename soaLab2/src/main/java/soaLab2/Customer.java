@@ -2,13 +2,17 @@ package soaLab2;
 
 import java.util.*;
 
+import jakarta.xml.bind.annotation.*;
+
+
+@XmlRootElement
 public class Customer {
 	public String name;
 	public List<PhoneNumber> PhoneNumbers; 
 	
 	
 	public Customer() {
-		List<PhoneNumber> PhoneNumbers = new ArrayList<>(); 
+		PhoneNumbers = new ArrayList<>(); 
 	}
 
 	
@@ -16,6 +20,7 @@ public class Customer {
 		this.name = s;
 	}
 	
+	@XmlElement(name="phone-number")
 	public List<PhoneNumber> getPhoneNumbers() {
 		return PhoneNumbers;
 	}
