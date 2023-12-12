@@ -8,11 +8,11 @@ import jakarta.xml.bind.annotation.*;
 @XmlRootElement
 public class Customer {
 	private String name;
-	private List<PhoneNumber> PhoneNumbers; 
+	private ArrayList<PhoneNumber> PhoneNumbers; 
 	
 	
 	public Customer() {
-		PhoneNumbers = new ArrayList<>(); 
+		PhoneNumbers = new ArrayList<PhoneNumber>(); 
 	}
 	
 	public String getName() {
