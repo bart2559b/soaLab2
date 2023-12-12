@@ -20,7 +20,7 @@ public class Customer {
 		this.name = s;
 	}
 	
-	@XmlElement(name="phone-number")
+	//@XmlElement(name="phone-number")
 	public List<PhoneNumber> getPhoneNumbers() {
 		return PhoneNumbers;
 	}

@@ -21,7 +21,7 @@ public class Main {
 	Marshaller m = jc.createMarshaller();
 	m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 	m.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
-	m.setProperty(Marshaller.JAXB_SCHEMA_LOCATION,"http://localhost:8080/xml/ http://localhost:8080/xml/customer.xsd");
+	m.setProperty(Marshaller.JAXB_SCHEMA_LOCATION,"http://localhost:8080/xml/http://localhost:8080/xml/customer.xsd");
 	m.marshal(customer, System.out);
 	m.marshal(customer, new File("customer-jaxb.xml"));
 
