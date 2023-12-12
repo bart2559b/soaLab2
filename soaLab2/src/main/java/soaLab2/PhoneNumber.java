@@ -6,5 +6,9 @@ public class PhoneNumber {
 	public PhoneNumber(String s) {
 		this.number = s;
 	}
+	
+	public String getPhoneNumber() {
+		return this.number;
+	}
 
 }
