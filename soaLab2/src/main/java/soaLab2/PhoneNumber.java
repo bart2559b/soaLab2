@@ -1,8 +1,17 @@
 package soaLab2;
 
 public class PhoneNumber {
-	public String number;
 	
+	private String number;
+	
+	public String getNumber() {
+		return number;
+	}
+
+	public void setNumber(String number) {
+		this.number = number;
+	}
+
 	public PhoneNumber() {
 		
 	}
@@ -11,8 +20,6 @@ public class PhoneNumber {
 		this.number = s;
 	}
 	
-	public String getPhoneNumber() {
-		return this.number;
-	}
+	
 
 }

@@ -17,7 +17,7 @@ public class JAXBGenerateObject {
 			System.out.println("Customer Name: " + cus.getName());
 			ArrayList<PhoneNumber> phoneList = (ArrayList<PhoneNumber>) cus.getPhoneNumbers();
 			for (PhoneNumber p : phoneList) {
-				System.out.println("phone number Id: " + p.getPhoneNumber());
+				System.out.println("phone number Id: " + p.getNumber());
 			}
 		} catch (JAXBException e) {
 			e.printStackTrace();
