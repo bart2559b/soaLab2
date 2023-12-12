@@ -1,6 +1,5 @@
 package soaLab2;
 
-
 import java.io.*;
 import java.util.*;
 
@@ -10,23 +9,21 @@ import jakarta.xml.bind.Unmarshaller;
 
 public class JAXBGenerateObject {
 	public static void main(String[] args) {
-		 try {
-		 InputStream is = new FileInputStream("customer-jaxb.xml");
-		 JAXBContext jaxbContext = JAXBContext.newInstance(Customer.class);
-		 Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-		 Customer cus = (Customer)jaxbUnmarshaller.unmarshal(is);
-		 System.out.println("Customer Name: " + cus.getName());
-		 ArrayList<PhoneNumber> phoneList = (ArrayList<PhoneNumber>)
-		cus.getPhoneNumbers();
-		 for (PhoneNumber p : phoneList) {
-		System.out.println("phone number Id: " + p.getPhoneNumber());
-		}
+		try {
+			InputStream is = new FileInputStream("customer-jaxb.xml");
+			JAXBContext jaxbContext = JAXBContext.newInstance(Customer.class);
+			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+			Customer cus = (Customer) jaxbUnmarshaller.unmarshal(is);
+			System.out.println("Customer Name: " + cus.getName());
+			ArrayList<PhoneNumber> phoneList = (ArrayList<PhoneNumber>) cus.getPhoneNumbers();
+			for (PhoneNumber p : phoneList) {
+				System.out.println("phone number Id: " + p.getPhoneNumber());
+			}
 		} catch (JAXBException e) {
-		e.printStackTrace();
+			e.printStackTrace();
 		} catch (FileNotFoundException e) {
-		e.printStackTrace();
+			e.printStackTrace();
 		}
-		}
-
+	}
 
 }
